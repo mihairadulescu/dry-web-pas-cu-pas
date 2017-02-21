@@ -10,9 +10,9 @@ module Ingestellar
       config.listeners = true
 
       config.auto_register = %w[
-        lib/ingestellar
         lib/persistence
         lib/operations
+        lib/entities
       ]
     end
 

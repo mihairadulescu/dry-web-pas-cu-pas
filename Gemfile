@@ -23,9 +23,9 @@ gem "dry-struct"
 gem "dry-transaction"
 gem "dry-types"
 gem "dry-validation"
-gem "dry-view", ">= 0.2.2"
 gem "slim"
 gem "roda-rest_api"
+gem "jsonapi-serializers"
 
 group :development, :test do
   gem "pry-byebug", platform: :mri
