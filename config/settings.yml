@@ -1,0 +1,8 @@
+development: &base
+  database_url: 'postgres://172.17.0.2/ingestellar_development?user=postgres&password=mysecretpassword'
+  session_secret: 'b01d8029577c1331ee2c20dee81ed5da'
+test:
+  <<: *base
+  database_url: 'postgres://172.17.0.2/ingestellar_development?user=postgres&password=mysecretpassword'
+production:
+  <<: *base
