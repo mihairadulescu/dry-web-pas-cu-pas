@@ -1,6 +1,6 @@
-require "dry-configurable"
-require "dry-transaction"
-require "ingestellar/container"
+require 'dry-configurable'
+require 'dry-transaction'
+require 'ingestellar/container'
 
 module Ingestellar
   class Transactions
@@ -11,12 +11,12 @@ module Ingestellar
     setting :container, Ingestellar::Container
     setting :options, {}
 
-    def self.define(&block)
+    def self.define
       yield(new(options))
     end
 
     def self.options
-      {container: config.container}.merge(config.options)
+      { container: config.container }.merge(config.options)
     end
 
     def initialize(options)

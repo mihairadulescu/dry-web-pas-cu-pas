@@ -1,40 +1,41 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "rake"
+gem 'rake'
 
 # Web framework
-gem "dry-web", ">= 0.6.0"
-gem "dry-web-roda", ">= 0.6.0"
-gem "puma"
-gem "rack_csrf"
+gem 'dry-web', '>= 0.6.0'
+gem 'dry-web-roda', '>= 0.6.0'
+gem 'puma'
+gem 'rack_csrf'
 
-gem "rack", ">= 2.0"
-gem "shotgun", ">= 0.9.2"
+gem 'rack', '>= 2.0'
+gem 'shotgun', '>= 0.9.2'
 
 # Database persistence
-gem "pg"
-gem "rom-repository"
-gem "rom-sql"
+gem 'pg'
+gem 'rom-repository'
+gem 'rom-sql'
 
 # Application dependencies
-gem "dry-matcher"
-gem "dry-monads"
-gem "dry-struct"
-gem "dry-transaction"
-gem "dry-types"
-gem "dry-validation"
-gem "slim"
-gem "roda-rest_api"
-gem "jsonapi-serializers"
+gem 'dry-matcher'
+gem 'dry-monads'
+gem 'dry-struct'
+gem 'dry-transaction'
+gem 'dry-types'
+gem 'dry-validation'
+gem 'slim'
+gem 'roda-rest_api'
+gem 'jsonapi-serializers'
 
 group :development, :test do
-  gem "pry-byebug", platform: :mri
+  gem 'pry-byebug', platform: :mri
+  gem 'rubocop'
 end
 
 group :test do
-  gem "capybara"
-  gem "capybara-screenshot"
-  gem "database_cleaner"
-  gem "poltergeist"
-  gem "rspec"
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'database_cleaner'
+  gem 'poltergeist'
+  gem 'rspec'
 end

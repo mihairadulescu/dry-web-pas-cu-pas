@@ -1,8 +1,8 @@
-Ingestellar::Container.namespace "persistence" do |persistence|
+Ingestellar::Container.namespace 'persistence' do |persistence|
   persistence.finalize(:rom) do
     init do
-      require "sequel"
-      require "rom"
+      require 'sequel'
+      require 'rom'
 
       use :monitor
 
@@ -15,14 +15,14 @@ Ingestellar::Container.namespace "persistence" do |persistence|
         extensions: [:error_sql]
       )
 
-      persistence.register("config", rom_config)
+      persistence.register('config', rom_config)
     end
 
     start do
-      config = persistence["persistence.config"]
-      config.auto_registration(persistence.root.join("lib/persistence"))
+      config = persistence['persistence.config']
+      config.auto_registration(persistence.root.join('lib/persistence'))
 
-      persistence.register("rom", ROM.container(config))
+      persistence.register('rom', ROM.container(config))
     end
   end
 end

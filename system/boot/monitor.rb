@@ -1,7 +1,7 @@
 Ingestellar::Container.finalize :monitor do |_container|
   init do
-    require "dry/monitor"
-    require "rom/instrumentation"
+    require 'dry/monitor'
+    require 'rom/instrumentation'
   end
 
   start do

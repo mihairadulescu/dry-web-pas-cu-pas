@@ -1,5 +1,5 @@
-require "dry/web/settings"
-require "dry-types"
+require 'dry/web/settings'
+require 'dry-types'
 
 module Ingestellar
   class Settings < Dry::Web::Settings

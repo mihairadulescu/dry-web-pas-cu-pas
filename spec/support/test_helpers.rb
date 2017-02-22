@@ -6,7 +6,7 @@ module TestHelpers
   end
 
   def rom
-    Ingestellar::Container["persistence.rom"]
+    Ingestellar::Container['persistence.rom']
   end
 
   def db_connection
