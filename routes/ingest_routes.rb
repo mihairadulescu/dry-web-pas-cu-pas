@@ -11,7 +11,7 @@ module Ingestellar
             r.resource :discovered do
               r.index do
                 r.resolve('main.transactions.fetch_entries') do |fetch_entries|
-                  result = fetch_entries.call(fancy_name: 'mihai') do |matcher|
+                  fetch_entries.call(fancy_name: 'mihai') do |matcher|
                     matcher.success do |value|
                       JSONAPI::Serializer.serialize(value[:entries], is_collection: true)
                     end
